@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - usando um esquema de cores azul */
+    --background: 210 33% 98%;
+    --foreground: 220 10% 15%;
+
+    --card: 210 25% 96%;
+    --card-foreground: 220 10% 15%;
+
+    --popover: 210 25% 96%;
+    --popover-foreground: 220 10% 15%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 90% 95%;
+    --secondary-foreground: 210 100% 40%;
+
+    --muted: 210 20% 90%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
+    --ring: 210 100% 50%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Dark theme - mantendo o azul como cor de destaque com fundo escuro */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 14%;
+    --input: 240 10% 14%;
+    --ring: 210 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply px-3 py-1.5 text-sm font-medium text-muted-foreground rounded-full hover:bg-muted transition-colors;
+  }
+
+  .nav-item-active {
+    @apply bg-muted text-foreground;
+  }
+
+  .card-hover {
+    @apply hover:bg-muted/50 transition-colors duration-200;
+  }
+
+  /* Estilo de botão padrão mais arredondado */
+  .btn-standard {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-medium transition-colors 
+    bg-primary text-primary-foreground hover:bg-primary/90 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+    disabled:pointer-events-none disabled:opacity-50 shadow-sm;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-medium transition-colors
+    border border-border bg-background hover:bg-accent/10 hover:text-accent-foreground
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+    disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  /* Novo estilo para cards de igreja com shadow reduzido */
+  .church-card {
+    @apply rounded-xl bg-card p-5 transition-all duration-200 hover:shadow-sm hover:translate-y-[-1px];
+  }
+}
