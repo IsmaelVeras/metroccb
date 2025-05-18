@@ -149,7 +149,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
         <div className="rounded-xl mt-4 bg-card p-6 max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-xl font-extrabold tracking-tight">Igrejas próximas</h2>
-            <div className="bg-muted/50 rounded-full px-3 py-1 text-sm text-muted-foreground">
+            <div className="bg-muted/50 rounded-full px-auto py-auto text-sm text-muted-foreground">
               {churches.length} {churches.length === 1 ? "igreja" : "igrejas"} encontrada
               {churches.length !== 1 ? "s" : ""}
             </div>
