@@ -20,7 +20,7 @@ function normalizeText(text: string): string {
 export function Stations({ stationsData }: { stationsData: Station[] }) {
   const [searchTerm, setSearchTerm] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
-  const stationsPerPage = 10
+  const stationsPerPage = 8
 
   const filteredStations = stationsData.filter((station) => {
     const normalizedSearch = normalizeText(searchTerm)
@@ -70,14 +70,14 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
                 <Link
                   key={station.id}
                   href={`/estacao/${station.id}`}
-                  className="group flex flex-col rounded-lg bg-card p-4 transition-colors hover:bg-muted/50"
+                  className="group flex flex-col rounded-lg bg-card p-4 transition-colors hover:bg-muted/50 dark:hover:bg-muted/80"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <div className="h-2 w-2 rounded-full" style={{ backgroundColor: lineColor }} />
-                    <span className="text-xs font-medium text-muted-foreground">{station.line}</span>
+                    <span className="text-xs font-normal text-muted-foreground">{station.line}</span>
                   </div>
-                  <h3 className="text-lg font-medium leading-none tracking-tight">{station.name}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{station.address}</p>
+                  <h3 className="text-lg font-extrabold leading-5 tracking-tight">{station.name}</h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground truncate ">{station.address}</p>
                 </Link>
               )
             })}

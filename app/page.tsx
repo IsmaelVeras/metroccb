@@ -22,13 +22,23 @@ export default function Home() {
       <Header />
       <main className="container py-6">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-semibold tracking-tight">Estações</h1>
-          <p className="text-muted-foreground mt-2">Encontre igrejas CCB próximas às estações em São Paulo</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-shadow-lg">
+            Congregue com mais{" "}
+            <span className="relative inline-block">
+              <span className="before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-lime-200 dark:before:bg-lime-400" />
+              <span className="relative text-black dark:text-lime-950 text-shadow-lg">
+                mobilidade
+              </span>
+            </span>
+          </h1>
+          <p className="text-muted-foreground mt-2 text-shadow-lg">
+            Congregue perto do metrô em São Paulo
+          </p>
         </div>
 
         {loading ? (
           <div className="flex justify-center items-center h-[60vh]">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-lime-500"></div>
           </div>
         ) : (
           <div className="mt-8">

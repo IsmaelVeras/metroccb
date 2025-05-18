@@ -4,7 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "CCB Perto do Metrô - Congregue com mais mobilidade",
+  title: "MetroCCB - Congregue com mais mobilidade",
   description: "Encontre igrejas da CCB próximas às estações de metrô e trem em São Paulo",
     generator: 'Ismael Veras'
 }
@@ -23,7 +23,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans bg-background text-foreground antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
         </ThemeProvider>
       </body>

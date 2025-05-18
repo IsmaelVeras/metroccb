@@ -57,12 +57,23 @@ export const ccbAddressesData: CcbChurch[] = [
   },
   {
     id: 7,
-    name: "Tucuruvi",
+    name: "Central - Metrô Tucuruvi",
     address: "Avenida Nova Cantareira, 2330, São Paulo, SP, Brasil",
     distance: "1.2 km",
     stationId: 101,
     cultos: {
       cultoOficial: ["Domingo - 19:00", "Terça-feira - 19:30", "Quinta-feira - 19:30"],
+    },
+  },
+  {
+    id: 7,
+    name: "Vila Sousa - Metrô Tucuruvi",
+    address: "Avenida Nova Cantareira, 2330, São Paulo, SP, Brasil",
+    distance: "1.2 km",
+    stationId: 101,
+    cultos: {
+      cultoOficial: ["Domingo - 19:00", "Terça-feira - 19:30", "Quinta-feira - 19:30"],
+      reuniaoJovens: ["Domingo - 9:30"],
     },
   },
   {
@@ -94,6 +105,17 @@ export const ccbAddressesData: CcbChurch[] = [
     stationId: 311,
     cultos: {
       cultoOficial: ["Domingo - 18:30", "Quarta-feira - 19:30", "Sexta-feira - 19:30"],
+      reuniaoJovens: ["Domingo - 10:00"],
+    },
+  },
+  {
+    id: 11,
+    name: "Vila Ré - Metrô Patriarca",
+    address: "Rua Buriti Alegre, 365, São Paulo, SP, Brasil",
+    distance: "400 m",
+    stationId: 316,
+    cultos: {
+      cultoOficial: ["Domingo - 18:30", "Segunda-feira - 20:00", "Quinta-feira - 14:00", "Sexta-feira - 19:30"],
       reuniaoJovens: ["Domingo - 10:00"],
     },
   },

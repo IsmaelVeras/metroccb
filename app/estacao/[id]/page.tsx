@@ -69,19 +69,10 @@ export default function StationPage({ params }: { params: { id: string } }) {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="container py-6">
-          <div className="max-w-2xl mx-auto mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Voltar para estações
-            </Link>
-          </div>
           <div className="rounded-lg bg-card p-6 max-w-md mx-auto">
             <h1 className="text-2xl font-semibold tracking-tight mb-4">Estação não encontrada</h1>
             <p className="text-muted-foreground mb-6">A estação que você está procurando não existe ou foi removida.</p>
-            <Button onClick={() => router.push("/")}>Voltar para a lista de estações</Button>
+            <Button className="bg-lime-400 text-black" onClick={() => router.push("/")}>Voltar para a lista de estações</Button>
           </div>
         </main>
       </div>
@@ -97,41 +88,32 @@ export default function StationPage({ params }: { params: { id: string } }) {
             href="/"
             className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar para estações
+            <ArrowLeft className="mr-1 h-4 w-4" />
+            Voltar
           </Link>
         </div>
 
         <div className="rounded-xl bg-card p-6 max-w-2xl mx-auto">
           <div className="flex gap-2 mb-4">
             <div className="h-2 w-2 rounded-full" style={{ backgroundColor: lineColor }} />
-            <span className="text-sm font-medium text-muted-foreground">{station.line}</span>
+            <span className="text-sm font-medium text-muted-foreground/60">{station.line}</span>
           </div>
 
-          <h1 className="text-2xl font-semibold tracking-tight">{station.name}</h1>
+          <h1 className="text-2xl font-semibold tracking-tight  text-shadow-lg">{station.name}</h1>
 
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-muted-foreground" />
               <div>
-                <h3 className="font-medium">Endereço</h3>
+                <h3 className="font-medium  text-shadow-lg">Endereço</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{station.address}</p>
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center text-sm hover:underline"
-                >
-                  <ExternalLink className="mr-1 h-3 w-3" />
-                  Ver no Google Maps
-                </a>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
               <Clock className="h-5 w-5 text-muted-foreground" />
               <div>
-                <h3 className="font-medium">Horário de Funcionamento</h3>
+                <h3 className="font-medium  text-shadow-lg">Horário de Funcionamento</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{station.openingHours}</p>
               </div>
             </div>
@@ -140,7 +122,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
           <div className="mt-6 flex items-start gap-3">
             <Accessibility className="h-5 w-5 text-muted-foreground" />
             <div>
-              <h3 className="font-medium">Acessibilidade</h3>
+              <h3 className="font-medium text-shadow-lg">Acessibilidade</h3>
               <div className="mt-2 flex flex-wrap gap-1">
                 {station.accessibility.map((item, index) => (
                   <span
@@ -153,11 +135,20 @@ export default function StationPage({ params }: { params: { id: string } }) {
               </div>
             </div>
           </div>
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center text-sm hover:underline"
+          >
+            <ExternalLink className="mr-1 h-3 w-3" />
+            Ver no Google Maps
+          </a>
         </div>
 
-        <div className="mt-8 max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-semibold tracking-tight">Igrejas CCB Próximas</h2>
+        <div className="rounded-xl mt-4 bg-card p-6 max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-extrabold tracking-tight">Igrejas próximas</h2>
             <div className="bg-muted/50 rounded-full px-3 py-1 text-sm text-muted-foreground">
               {churches.length} {churches.length === 1 ? "igreja" : "igrejas"} encontrada
               {churches.length !== 1 ? "s" : ""}
@@ -167,43 +158,31 @@ export default function StationPage({ params }: { params: { id: string } }) {
           {churches.length > 0 ? (
             <div className="grid gap-4">
               {churches.map((church) => (
-                <div key={church.id} className="church-card">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full" style={{ backgroundColor: lineColor }} />
-                      <span className="text-sm font-medium">{church.name}</span>
-                      <span
-                        className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium"
-                        style={{ backgroundColor: `${lineColor}20`, color: lineColor }}
-                      >
-                        {church.distance}
-                      </span>
-                    </div>
-
-                    <p className="text-sm text-muted-foreground">{church.address}</p>
-
-                    <div className="flex gap-2">
-                      <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center text-sm hover:underline"
-                      >
-                        <ExternalLink className="mr-1 h-3 w-3" />
-                        Ver no Google Maps
-                      </a>
-                    </div>
-
-                    <Accordion type="single" collapsible className="w-full">
+                <div key={church.id}>
+                  <div className="flex flex-col bg-muted/20 gap-4 p-3 rounded-md border border-muted">
+                    <Accordion type="single" collapsible className="w-full ">
                       <AccordionItem value="cultos" className="border-b-1">
                         <AccordionTrigger className="py-2 hover:no-underline">
-                          <div className="flex items-center">
-                            <CalendarRange className="mr-2 h-4 w-4" />
-                            <span>Horários dos Cultos</span>
-                          </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-medium truncate">{church.name}</span>
+                          
+                        </div>
                         </AccordionTrigger>
                         <AccordionContent>
                           <div className="space-y-4 pt-2">
+                              <p className="text-sm text-muted-foreground">{church.address}</p>
+                              <p className="text-sm text-muted-foreground">Distância: {church.distance}</p>
+                             <div className="flex gap-2">
+                              <a
+                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-2 inline-flex items-center text-sm hover:underline"
+                              >
+                                <ExternalLink className="mr-1 h-3 w-3" />
+                                Ver no Google Maps
+                              </a>
+                            </div>
                             <div>
                               <h4 className="text-sm font-semibold mb-2 flex items-center">
                                 <div className="h-3 w-1 rounded-full mr-2" style={{ backgroundColor: lineColor }}></div>
@@ -273,10 +252,10 @@ export default function StationPage({ params }: { params: { id: string } }) {
               ))}
             </div>
           ) : (
-            <div className="rounded-xl bg-card p-6 max-w-2xl mx-auto">
+            <div className="rounded-xl bg-card border p-6 max-w-2xl mx-auto">
               <div className="flex flex-col items-center gap-4">
                 <p className="text-sm text-muted-foreground">
-                  Nenhuma igreja próxima encontrada
+                  Nenhum endereço encontrado próximo à estação "{station.name}"
                 </p>
               </div>
             </div>
