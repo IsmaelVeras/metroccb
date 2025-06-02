@@ -22,7 +22,7 @@ export default function Home() {
       <Header />
       <main className="container py-6">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-semibold tracking-tight text-shadow-lg">
+          <h1 className="text-3xl font-semibold tracking-normal text-shadow-lg">
             Congregue com mais{" "}
             <span className="relative inline-block">
               <span className="before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-lime-200 dark:before:bg-lime-400" />
@@ -31,8 +31,8 @@ export default function Home() {
               </span>
             </span>
           </h1>
-          <p className="text-muted-foreground mt-2 text-shadow-lg">
-            Congregue perto do metrô em São Paulo
+          <p className="text-muted-foreground mt-2 font-medium text-lime-900 dark:text-gray-300 text-shadow-lg">
+            ... e bem perto do metrô de São Paulo!
           </p>
         </div>
 
@@ -45,6 +45,8 @@ export default function Home() {
             <Stations stationsData={stationsData} />
           </div>
         )}
+
+       
       </main>
     </div>
   )

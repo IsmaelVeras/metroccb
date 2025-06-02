@@ -149,7 +149,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
         <div className="rounded-xl mt-4 bg-card p-6 max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-xl font-extrabold tracking-tight">Igrejas próximas</h2>
-            <div className="bg-muted/50 rounded-full px-auto py-auto text-sm text-muted-foreground">
+            <div className="bg-muted/40 p-2 rounded px-auto py-auto text-sm text-muted-foreground">
               {churches.length} {churches.length === 1 ? "igreja" : "igrejas"} encontrada
               {churches.length !== 1 ? "s" : ""}
             </div>
@@ -159,7 +159,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
             <div className="grid gap-4">
               {churches.map((church) => (
                 <div key={church.id}>
-                  <div className="flex flex-col bg-muted/20 gap-4 p-3 rounded-md border border-muted">
+                  <div className="flex flex-col bg-background/80 p-3 rounded-sm">
                     <Accordion type="single" collapsible className="w-full ">
                       <AccordionItem value="cultos" className="border-b-1">
                         <AccordionTrigger className="py-2 hover:no-underline">

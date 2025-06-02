@@ -90,7 +90,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
             </p>
             <div className="flex items-center space-x-2">
               <Button
-                variant="outline"
+                variant="secondary"
                 size="icon"
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
@@ -104,7 +104,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
                 <span className="text-muted-foreground">{totalPages}</span>
               </div>
               <Button
-                variant="outline"
+                variant="secondary"
                 size="icon"
                 onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
@@ -116,6 +116,16 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
           </div>
         </>
       )}
+
+       <footer className="w-full  rounded-lg md:flex md:items-center md:justify-between mt-8">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="" className="hover:underline">MetrôCCB</a>. Todos os Direitos Reservados.
+          </span>
+          <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+              <li>
+                  <a href="#" className="hover:underline me-4 md:me-6 text-gray-400">Nos ajude com informações</a>
+              </li>
+          </ul>
+      </footer>
     </div>
   )
 }

@@ -20,7 +20,7 @@ export function Header() {
       <div className="container flex h-14 items-center justify-center">
         <div className="flex items-center justify-between w-full max-w-2xl">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-medium">MetroCCB</span>
+            <span className="font-medium">MetrôCCB</span>
           </Link>
           {mounted && (
             <Button
