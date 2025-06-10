@@ -83,14 +83,36 @@ export default function StationPage({ params }: { params: { id: string } }) {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="container py-6">
-        <div className="max-w-2xl mx-auto mb-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
+        <div className="max-w-2xl mx-auto mb-6 flex justify-between items-center">
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => router.back()}
+            className="rounded-full"
           >
-            <ArrowLeft className="mr-1 h-4 w-4" />
-            Voltar
-          </Link>
+            <ArrowLeft className="h-5 w-5" />
+          </Button>
+
+          
+            <a
+            href={`https://wa.me/?text=${encodeURIComponent('Igreja CCB Perto da Estação ' + station.name + ' https://metroccb.vercel.app/estacao/' + station.id)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+            className="rounded-full"
+            variant="ghost"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.36 0 .01 5.35.01 12a11.9 11.9 0 0 0 1.64 6.04L0 24l6.27-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22c-1.84 0-3.63-.5-5.19-1.43l-.37-.22-3.72.97.99-3.63-.24-.38A9.95 9.95 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10zm5.26-7.56c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.3-.74.94-.91 1.13-.17.2-.34.22-.63.07a8.07 8.07 0 0 1-2.37-1.46 8.96 8.96 0 0 1-1.65-2.05c-.17-.3 0-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.64-1.53-.88-2.08-.23-.54-.47-.47-.64-.47-.16 0-.35-.02-.54-.02a1.04 1.04 0 0 0-.75.35c-.26.29-1.01.98-1.01 2.4 0 1.42 1.03 2.8 1.18 2.99.15.2 2.03 3.1 4.93 4.34 1.63.7 2.26.77 3.06.65.49-.08 1.7-.7 1.94-1.36.24-.66.24-1.23.17-1.36-.06-.14-.26-.22-.55-.37z" />
+            </svg>
+          </Button>
+          </a>
         </div>
 
         <div className="rounded-xl bg-card p-6 max-w-2xl mx-auto">

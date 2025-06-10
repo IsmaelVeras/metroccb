@@ -4,9 +4,9 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "MetroCCB - Congregue com mais mobilidade",
-  description: "Encontre igrejas da CCB próximas às estações de metrô e trem em São Paulo",
-    generator: 'Ismael Veras'
+  title: "MetrôCCB - Congregue com mais mobilidade",
+  description: "Encontre igrejas da CCB (Congregação Cristã no Brasil) próximas às estações de metrô e trem em São Paulo",
+  generator: "Ismael Veras",
 }
 
 export default function RootLayout({

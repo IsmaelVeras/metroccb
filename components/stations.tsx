@@ -117,13 +117,12 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
         </>
       )}
 
-       <footer className="w-full  rounded-lg md:flex md:items-center md:justify-between mt-8">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="" className="hover:underline">MetrôCCB</a>. Todos os Direitos Reservados.
-          </span>
+       <footer className="w-full text-center md:flex md:items-center md:justify-between mt-8">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="" className="hover:underline">MetrôCCB</a>. Todos os Direitos Reservados.</span>
           <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-              <li>
-                  <a href="#" className="hover:underline me-4 md:me-6 text-gray-400">Nos ajude com informações</a>
-              </li>
+            <li>
+                <a target="_blank" href="https://tally.so/r/wbEvgE" className="hover:underline bg-lime-400 p-1 rounded-sm text-lime-950">Nos ajude com informações</a>
+            </li>
           </ul>
       </footer>
     </div>

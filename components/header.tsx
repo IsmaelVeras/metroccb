@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { LucideChurch, Sun, Moon } from "lucide-react"
+import { Sun, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Logo from "@/public/logo.png"
 
 export function Header() {
   const { theme, setTheme } = useTheme()
@@ -20,7 +22,9 @@ export function Header() {
       <div className="container flex h-14 items-center justify-center">
         <div className="flex items-center justify-between w-full max-w-2xl">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-medium">MetrôCCB</span>
+            <span className="font-medium">
+              <Image src={Logo} alt="Logo MetrôCCB" width={120} height={80} />
+            </span>
           </Link>
           {mounted && (
             <Button

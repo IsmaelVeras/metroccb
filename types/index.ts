@@ -17,7 +17,7 @@ export interface CcbChurch {
   distance: string
   stationId: number
   cultos: {
-    cultoOficial: string[]
+    cultoOficial?: string[]
     reuniaoJovens?: string[]
   }
 }

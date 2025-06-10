@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 800)
+    }, 8)
 
     return () => clearTimeout(timer)
   }, [])
@@ -22,17 +22,17 @@ export default function Home() {
       <Header />
       <main className="container py-6">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-semibold tracking-normal text-shadow-lg">
+          <h1 className="text-3xl font-bold tracking-tight text-shadow-lg">
             Congregue com mais{" "}
             <span className="relative inline-block">
-              <span className="before:absolute before:-inset-1 before:block before:-skew-y-2 before:bg-lime-200 dark:before:bg-lime-400" />
-              <span className="relative text-black dark:text-lime-950 text-shadow-lg">
+              <span className="before:absolute before:-inset-1 before:block before:-skew-y-1  before:bg-lime-200 dark:before:bg-lime-400" />
+              <span className="relative  decoration-lime-600 text-black dark:text-lime-950 text-shadow-lg">
                 mobilidade
               </span>
             </span>
           </h1>
           <p className="text-muted-foreground mt-2 font-medium text-lime-900 dark:text-gray-300 text-shadow-lg">
-            ... e bem perto do metrô de São Paulo!
+           Encontre igrejas da CCB próximas às estações de metrô em São Paulo
           </p>
         </div>
 
@@ -45,8 +45,6 @@ export default function Home() {
             <Stations stationsData={stationsData} />
           </div>
         )}
-
-       
       </main>
     </div>
   )
