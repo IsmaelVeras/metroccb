@@ -46,7 +46,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
               setSearchTerm(e.target.value)
               setCurrentPage(1) // Reset para a primeira página ao buscar
             }}
-            className="pl-9 bg-muted/50 rounded-full "
+            className="pl-9 bg-muted/50 rounded-full"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
                     <div className="h-2 w-2 rounded-full" style={{ backgroundColor: lineColor }} />
                     <span className="text-xs font-normal text-muted-foreground">{station.line}</span>
                   </div>
-                  <h3 className="text-lg font-extrabold leading-5 tracking-tight">{station.name}</h3>
+                  <h3 className="text-lg font-extrabold truncate leading-5 tracking-tight">{station.name}</h3>
                   <p className="mt-2 line-clamp-2 text-sm text-muted-foreground truncate ">{station.address}</p>
                 </Link>
               )

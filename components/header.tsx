@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex items-center justify-between w-full max-w-2xl">
           <Link href="/" className="flex items-center space-x-2">
             <span className="font-medium">
-              <Image src={Logo} alt="Logo MetrôCCB" width={120} height={80} />
+              <Image src={Logo} alt="Logo MetrôCCB" width={90} height={60} />
             </span>
           </Link>
           {mounted && (

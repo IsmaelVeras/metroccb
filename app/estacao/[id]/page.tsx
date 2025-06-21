@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { ArrowLeft, Clock, MapPin, Accessibility, ExternalLink, CalendarRange, Users, LucideChurch } from "lucide-react"
+import { ArrowLeft, Clock, MapPin, Accessibility, ExternalLink, CalendarRange, Users, LucideChurch, CalendarClock } from "lucide-react"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -11,6 +10,8 @@ import { stationsData } from "@/data/stations"
 import { ccbAddressesData } from "@/data/ccb-addresses"
 import { extractLineNumber, getLineColor } from "@/data/metro-lines"
 import type { Station, CcbChurch } from "@/types"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 export default function StationPage({ params }: { params: { id: string } }) {
   const router = useRouter()
@@ -21,33 +22,36 @@ export default function StationPage({ params }: { params: { id: string } }) {
   const [lineColor, setLineColor] = useState("#cccccc")
 
   useEffect(() => {
-    try {
-      const stationId = Number.parseInt(params.id)
-      if (isNaN(stationId)) {
-        setError(true)
-        setLoading(false)
-        return
-      }
+  try {
+    const stationId = params.id;  // Recebe string diretamente
 
-      const foundStation = stationsData.find((s) => s.id === stationId)
-
-      if (foundStation) {
-        setStation(foundStation)
-        const lineNumber = extractLineNumber(foundStation.line)
-        setLineColor(getLineColor(lineNumber))
-
-        const nearbyChurches = ccbAddressesData.filter((c) => c.stationId === stationId)
-        setChurches(nearbyChurches)
-      } else {
-        setError(true)
-      }
-    } catch (err) {
-      console.error("Error loading station:", err)
-      setError(true)
-    } finally {
-      setLoading(false)
+    if (typeof stationId !== "string" || stationId.trim() === "") {
+      setError(true);
+      setLoading(false);
+      return;
     }
-  }, [params.id])
+
+    // Busca a estação pelo id string (UUID)
+    const foundStation = stationsData.find((s) => s.id === stationId);
+
+    if (foundStation) {
+      setStation(foundStation);
+      const lineNumber = extractLineNumber(foundStation.line);
+      setLineColor(getLineColor(lineNumber));
+
+      const nearbyChurches = ccbAddressesData.filter((c) => c.stationId === stationId);
+      setChurches(nearbyChurches);
+    } else {
+      setError(true);
+    }
+  } catch (err) {
+    console.error("Erro ao carregar a estação:", err);
+    setError(true);
+  } finally {
+    setLoading(false);
+  }
+}, [params.id]);
+
 
   // Show loading state
   if (loading) {
@@ -101,8 +105,8 @@ export default function StationPage({ params }: { params: { id: string } }) {
             rel="noopener noreferrer"
           >
             <Button
-            className="rounded-full"
-            variant="ghost"
+            className="rounded-full text-foreground"
+            variant="default"
           >
             <svg
               className="w-5 h-5"
@@ -110,7 +114,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
               viewBox="0 0 24 24"
             >
               <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.36 0 .01 5.35.01 12a11.9 11.9 0 0 0 1.64 6.04L0 24l6.27-1.64A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22c-1.84 0-3.63-.5-5.19-1.43l-.37-.22-3.72.97.99-3.63-.24-.38A9.95 9.95 0 0 1 2 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10zm5.26-7.56c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.3-.74.94-.91 1.13-.17.2-.34.22-.63.07a8.07 8.07 0 0 1-2.37-1.46 8.96 8.96 0 0 1-1.65-2.05c-.17-.3 0-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.64-1.53-.88-2.08-.23-.54-.47-.47-.64-.47-.16 0-.35-.02-.54-.02a1.04 1.04 0 0 0-.75.35c-.26.29-1.01.98-1.01 2.4 0 1.42 1.03 2.8 1.18 2.99.15.2 2.03 3.1 4.93 4.34 1.63.7 2.26.77 3.06.65.49-.08 1.7-.7 1.94-1.36.24-.66.24-1.23.17-1.36-.06-.14-.26-.22-.55-.37z" />
-            </svg>
+            </svg> Whatsapp
           </Button>
           </a>
         </div>
@@ -168,9 +172,9 @@ export default function StationPage({ params }: { params: { id: string } }) {
           </a>
         </div>
 
-        <div className="rounded-xl mt-4 bg-card p-6 max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-xl font-extrabold tracking-tight">Igrejas próximas</h2>
+        <div className="rounded-xl mt-4 bg-card p-3 max-w-2xl mx-auto">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-xl font-extrabold tracking-tight text-muted-foreground ml-2">Igrejas próximas</h2>
             <div className="bg-muted/40 p-2 rounded px-auto py-auto text-sm text-muted-foreground">
               {churches.length} {churches.length === 1 ? "igreja" : "igrejas"} encontrada
               {churches.length !== 1 ? "s" : ""}
@@ -181,94 +185,75 @@ export default function StationPage({ params }: { params: { id: string } }) {
             <div className="grid gap-4">
               {churches.map((church) => (
                 <div key={church.id}>
-                  <div className="flex flex-col bg-background/80 p-3 rounded-sm">
-                    <Accordion type="single" collapsible className="w-full ">
-                      <AccordionItem value="cultos" className="border-b-1">
-                        <AccordionTrigger className="py-2 hover:no-underline">
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium truncate">{church.name}</span>
-                          
-                        </div>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <div className="space-y-4 pt-2">
-                              <p className="text-sm text-muted-foreground">{church.address}</p>
-                              <p className="text-sm text-muted-foreground">Distância: {church.distance}</p>
-                             <div className="flex gap-2">
-                              <a
-                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-2 inline-flex items-center text-sm hover:underline"
-                              >
-                                <ExternalLink className="mr-1 h-3 w-3" />
-                                Ver no Google Maps
-                              </a>
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-semibold mb-2 flex items-center">
-                                <div className="h-3 w-1 rounded-full mr-2" style={{ backgroundColor: lineColor }}></div>
-                                Cultos Oficiais
-                              </h4>
-                              <div className="space-y-2">
-                                {church.cultos.cultoOficial.map((culto, index) => {
-                                  // Extrair dia e horário
-                                  const [dia, horario] = culto.split(" - ")
+                  <div className="flex flex-col p-3 rounded-sm">
 
-                                  return (
-                                    <div key={index} className="flex items-center p-2 rounded-lg bg-muted/50">
-                                      <div
-                                        className="p-1.5 rounded-full mr-3"
-                                        style={{ backgroundColor: `${lineColor}20` }}
-                                      >
-                                        <Clock className="h-4 w-4" style={{ color: lineColor }} />
-                                      </div>
-                                      <div>
-                                        <p className="font-medium text-sm">{dia}</p>
-                                        <p className="text-xs text-muted-foreground">{horario}</p>
-                                      </div>
+                     <Accordion type="single" collapsible>
+                      <AccordionItem value="1">
+                        <AccordionTrigger className="text-xl p-2 overflow-hidden text-ellipsis font-semibold">{church.name} </AccordionTrigger>
+                        <AccordionContent>
+                          <Card className="bg-background/70 border rounded-2xl border-dotted">
+                            <CardContent className="space-y-4 p-4">
+                              <div>
+                                <p className="text-sm text-muted-foreground">
+                                  <b>Endereço:</b> {church.address}
+                                </p>
+                                <p className="text-sm mt-3 text-muted-foreground">
+                                  <b>Distância:</b> {church.distance} 
+                                </p>
+                                <a
+                                  href="https://www.google.com/maps?q=Rua+Afonso+Arinos,+91,+03033-030,+São+Paulo"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex mt-3 items-center gap-1 text-sm font-medium dark:text-primary-foreground hover:underline"
+                                  >
+                                  <Button
+                                    size="sm"
+                                    variant="secondary"
+                                    className="shadow-none border-none"
+                                  >
+                                    <ExternalLink className="mr-1 h-3 w-3" />
+                                    Ver no Google Maps
+                                  </Button>
+                                  </a>
+                              </div>
+
+                              <Separator />
+
+                              <div>
+                                <h3 className="text-sm font-semibold mb-2">Cultos Oficiais</h3>
+                                 {church.cultos.cultoOficial.map((culto, index) => (
+                                  <div
+                                    key={index}
+                                    className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed"
+                                  >
+                                    <div className="flex items-center space-x-2">
+                                      <CalendarClock className="w-4 h-4 text-muted-foreground" />
+                                      <span>{culto}</span>
                                     </div>
+                                  </div>
+                                ))}
+                              </div>
+
+                              <div>
+                                <h3 className="text-sm font-semibold mb-2">Reunião de Jovens</h3>
+                                  {church.cultos.reuniaoJovens.map((index) => {
+                                  return (
+                                  <div  key={index}  className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed">
+                                    <div className="flex items-center">
+                                      <CalendarClock className="w-4 h-4 text-muted-foreground" />
+                                      <span> {church.cultos.reuniaoJovens} </span>
+                                    </div>
+                                  </div>
                                   )
                                 })}
                               </div>
-                            </div>
 
-                            {church.cultos.reuniaoJovens?.length > 0 && (
-                              <div>
-                                <h4 className="text-sm font-semibold mb-2 flex items-center">
-                                  <div
-                                    className="h-3 w-1 rounded-full mr-2"
-                                    style={{ backgroundColor: lineColor }}
-                                  ></div>
-                                  Reunião de Jovens
-                                </h4>
-                                <div className="space-y-2">
-                                  {church.cultos.reuniaoJovens.map((reuniao, index) => {
-                                    // Extrair dia e horário
-                                    const [dia, horario] = reuniao.split(" - ")
-
-                                    return (
-                                      <div key={index} className="flex items-center p-2 rounded-lg bg-muted/50">
-                                        <div
-                                          className="p-1.5 rounded-full mr-3"
-                                          style={{ backgroundColor: `${lineColor}20` }}
-                                        >
-                                          <Clock className="h-4 w-4" style={{ color: lineColor }} />
-                                        </div>
-                                        <div>
-                                          <p className="font-medium text-sm">{dia}</p>
-                                          <p className="text-xs text-muted-foreground">{horario}</p>
-                                        </div>
-                                      </div>
-                                    )
-                                  })}
-                                </div>
-                              </div>
-                            )}
-                          </div>
+                            </CardContent>
+                          </Card>
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
+                  
                   </div>
                 </div>
               ))}

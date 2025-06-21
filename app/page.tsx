@@ -21,20 +21,38 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="container py-6">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold tracking-tight text-shadow-lg">
+        <div className="text-center mb-8 relative">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-shadow-lg">
             Congregue com mais{" "}
             <span className="relative inline-block">
-              <span className="before:absolute before:-inset-1 before:block before:-skew-y-1  before:bg-lime-200 dark:before:bg-lime-400" />
-              <span className="relative  decoration-lime-600 text-black dark:text-lime-950 text-shadow-lg">
+              {/* Rabisco SVG */}
+              <svg
+                viewBox="0 0 200 30"
+                className="absolute -bottom-1 left-0 w-full h-6"
+                preserveAspectRatio="none"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 20 Q 50 10, 100 20 T 195 20"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  className="text-lime-300 dark:text-lime-500 opacity-70"
+                  strokeLinecap="round"
+                />
+              </svg>
+
+              <span className="relative text-black dark:text-lime-100 text-shadow-lg">
                 mobilidade
               </span>
             </span>
           </h1>
-          <p className="text-muted-foreground mt-2 font-medium text-lime-900 dark:text-gray-300 text-shadow-lg">
-           Encontre igrejas da CCB próximas às estações de metrô em São Paulo
+
+          <p className="mt-3 text-base md:text-lg font-medium text-lime-800 dark:text-gray-300 text-shadow">
+            Encontre igrejas da CCB próximas às estações de metrô em São Paulo
           </p>
         </div>
+
 
         {loading ? (
           <div className="flex justify-center items-center h-[60vh]">
