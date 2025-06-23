@@ -20,25 +20,31 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur">
       <div className="container flex h-14 items-center justify-center">
-        <div className="flex items-center justify-between w-full max-w-2xl">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-medium">
-              <Image src={Logo} alt="Logo MetrôCCB" width={90} height={60} />
-            </span>
+        <div className="flex items-center justify-between w-full max-w-2xl px-2">
+          
+          <Link href="/" className="flex items-center">
+            <Image src={Logo} alt="Logo MetrôCCB" width={90} height={60} priority />
           </Link>
+
           {mounted && (
             <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            aria-label="Alternar tema"
-            className="rounded-full"
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              aria-label="Alternar tema"
+              className="rounded-full hover:bg-muted/50 transition"
             >
-              {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+              {theme === "light" ? (
+                <Moon className="h-5 w-5 text-muted-foreground" />
+              ) : (
+                <Sun className="h-5 w-5 text-muted-foreground" />
+              )}
             </Button>
           )}
+          
         </div>
       </div>
     </header>
+
   )
 }

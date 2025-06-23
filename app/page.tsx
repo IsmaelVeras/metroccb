@@ -55,9 +55,11 @@ export default function Home() {
 
 
         {loading ? (
-          <div className="flex justify-center items-center h-[60vh]">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-lime-500"></div>
-          </div>
+          <main className="container py-6">
+            <div className="flex justify-center items-center h-[60vh]">
+              <div className="h-10 w-10 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
+            </div>
+          </main>
         ) : (
           <div className="mt-8">
             <Stations stationsData={stationsData} />

@@ -271,24 +271,6 @@ const linha2: Station[] = [
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "5b773902-15cd-4018-96cc-11a6131639d2",
-    "name": "Paraíso",
-    "line": "Linha 2-Verde",
-    "type": "Metrô",
-    "address": "Rua Vergueiro, 1465 - Paraíso, São Paulo - SP, 04101-000",
-    "openingHours": "Todos os dias, das 4h40 às 0h32",
-    "accessibility": ["Elevadores", "Escadas rolantes", "Integração com Linha 1-Azul"]
-  },
-  {
-    "id": "ffbe13db-07d9-41a7-ae8a-f465b67fa03f",
-    "name": "Ana Rosa",
-    "line": "Linha 2-Verde",
-    "type": "Metrô",
-    "address": "Rua Vergueiro, 505 - Vila Mariana, São Paulo - SP, 04101-000",
-    "openingHours": "Todos os dias, das 4h40 às 0h34",
-    "accessibility": ["Elevadores", "Escadas rolantes", "Integração com Linha 1-Azul"]
-  },
-  {
     "id": "3cc2d7f1-d6a0-4753-8b8a-f2e28a4de980",
     "name": "Chácara Klabin",
     "line": "Linha 2-Verde",
@@ -505,15 +487,6 @@ const linha3: Station[] = [
 // Linha 4 - Amarela (Yellow Line)
 const linha4: Station[] = [
   {
-    "id": "bcc3a53f-04d6-47fc-8e18-1b8ef089a51c",
-    "name": "República",
-    "line": "Linha 4-Amarela",
-    "type": "ViaQuatro",
-    "address": "Praça da República, s/n - República, São Paulo - SP, 01045-903",
-    "openingHours": "Todos os dias, das 4h40 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
-  {
     "id": "d460aa31-dfc0-4e6b-8d8a-4a648cbe1f47",
     "name": "Higienópolis-Mackenzie",
     "line": "Linha 4-Amarela",
@@ -728,15 +701,6 @@ const linha5: Station[] = [
 
 // Linha 15 - Prata (Silver Line - Monorail)
 const linha15: Station[] = [
-  {
-    "id": "e9306a2e-3c4b-43d0-8f43-9be043fa3eb9",
-    "name": "Vila Prudente",
-    "line": "Linha 15-Prata",
-    "type": "Monotrilho",
-    "address": "Av. Professor Luiz Ignácio Anhaia Mello, 100 - Vila Prudente, São Paulo - SP, 03150-000",
-    "openingHours": "Todos os dias, das 4h40 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
   {
     "id": "2e41e182-88c3-4c40-bb2d-b5b35c6d44df",
     "name": "Oratório",
@@ -982,15 +946,6 @@ const linha8: Station[] = [
     "accessibility": ["Elevadores", "Piso tátil"]
   },
   {
-    "id": "5f7eab94-b2a6-4e83-8f07-2a2e1bc0a7d2",
-    "name": "Palmeiras–Barra Funda",
-    "line": "Linha 8–Diamante",
-    "type": "CPTM",
-    "address": "Av. Mário de Andrade, 664 - Barra Funda, São Paulo - SP, 01156-001",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
-  {
     "id": "8a8c1b3d-5f2d-4ad4-9e35-38a9f30b0298",
     "name": "Lapa",
     "line": "Linha 8–Diamante",
@@ -1166,15 +1121,6 @@ const linha9: Station[] = [
     "accessibility": ["Elevadores", "Piso tátil"]
   },
   {
-    "id": "ea3852b4-b9f2-4a9f-a161-32e9d9317b30",
-    "name": "Pinheiros",
-    "line": "Linha 9‑Esmeralda",
-    "type": "ViaMobilidade",
-    "address": "Av. das Nações Unidas - Pinheiros, São Paulo - SP",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
-  {
     "id": "2e7dcb55-f3f8-4a4d-8b1e-22d0a6b40b11",
     "name": "Hebraica–Rebouças",
     "line": "Linha 9‑Esmeralda",
@@ -1327,7 +1273,7 @@ const linha9: Station[] = [
     "name": "Mogi das Cruzes",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Av. Cândido Portinari, 2000 - Mogi das Cruzes - SP, 08780-000",
+    "address": "Praça Sacadura Cabral - Centro, Mogi das Cruzes - SP, 08710-450",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
@@ -1402,15 +1348,6 @@ const linha11: Station[] = [
 
 // Linha 12 - Safira (Sapphire Line)
 const linha12: Station[] = [
-  {
-    "id": "7199b4ec-9b3a-43d0-8d2a-e3c429b60c23",
-    "name": "Engenheiro Goulart",
-    "line": "Linha 12 - Safira",
-    "type": "CPTM",
-    "address": "Av. Dr. Assis Ribeiro, 1460 - Cangaíba, São Paulo - SP, 03810-000",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
   {
     "id": "a4bdbb49-1778-4c88-9a5e-c4fddf25165d",
     "name": "Dom Bosco",

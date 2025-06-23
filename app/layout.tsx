@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "MetrôCCB - Congregue com mais mobilidade",
-  description: "Encontre igrejas da CCB (Congregação Cristã no Brasil) próximas às estações de metrô e trem em São Paulo",
-  generator: "Ismael Veras",
+  description: "Encontre igrejas da CCB (Congregação Cristã no Brasil) e congregue próximas às estações de metrô e trem em São Paulo",
+  creator: "Ismael Veras",
 }
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans bg-background text-foreground antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           {children}
         </ThemeProvider>
       </body>
