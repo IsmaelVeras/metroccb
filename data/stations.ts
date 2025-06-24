@@ -221,7 +221,7 @@ const linha2: Station[] = [
     "name": "Vila Madalena",
     "line": "Linha 2-Verde",
     "type": "Metrô",
-    "address": "Rua Heitor Penteado, 1523 - Sumaré, São Paulo - SP, 05438-300",
+    "address": "R. Dr. Paulo Vieira, 010 - Sumarezinho, São Paulo - SP, 05438-100",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Elevadores", "Piso tátil"]
   },
@@ -302,7 +302,7 @@ const linha2: Station[] = [
     "name": "Sacomã",
     "line": "Linha 2-Verde",
     "type": "Metrô",
-    "address": "Rua Greenfeld, 177 - Ipiranga, São Paulo - SP, 04263-000",
+    "address": "R. Agostinho Gomes, 3443-3499 - Ipiranga, São Paulo - SP, 04206-002",
     "openingHours": "Todos os dias, das 4h40 às 0h42",
     "accessibility": ["Elevadores"]
   },
@@ -311,7 +311,7 @@ const linha2: Station[] = [
     "name": "Tamanduateí",
     "line": "Linha 2-Verde",
     "type": "Metrô",
-    "address": "Av. Presidente Wilson, 486 - Ipiranga, São Paulo - SP, 03171-000",
+    "address": "Av. Presidente Wilson, 4801 - Vila Independencia, São Paulo - SP, 03153-001",
     "openingHours": "Todos os dias, das 4h40 às 0h44",
     "accessibility": ["Elevadores", "Integração com CPTM"]
   },
@@ -320,7 +320,7 @@ const linha2: Station[] = [
     "name": "Vila Prudente",
     "line": "Linha 2-Verde",
     "type": "Metrô",
-    "address": "Av. Professor Luis Ignácio de Anhaia Mello, 1381 - Vila Prudente, São Paulo - SP, 03150-000",
+    "address": "Av. Professor Luis Ignácio de Anhaia Mello, 1359 - Vila Prudente, São Paulo - SP, 03150-000",
     "openingHours": "Todos os dias, das 4h40 às 0h46",
     "accessibility": ["Elevadores", "Integração com Linha 15-Prata"]
   }
@@ -343,7 +343,7 @@ const linha3: Station[] = [
     "name": "Marechal Deodoro",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Praça Marechal Deodoro, s/n - Santa Cecília, São Paulo - SP, 01124-001",
+    "address": "Praça Mal. Deodoro, 311 - Santa Cecilia, São Paulo - SP, 18200-007",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Piso tátil"]
   },
@@ -397,7 +397,7 @@ const linha3: Station[] = [
     "name": "Bresser-Mooca",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Av. Radial Leste, s/n - Bresser, São Paulo - SP, 03162-000",
+    "address": "R. Bresser, 1408 - Brás, São Paulo - SP, 03053-000",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Piso tátil"]
   },
@@ -406,7 +406,7 @@ const linha3: Station[] = [
     "name": "Belém",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Av. Alcântara Machado, s/n - Belém, São Paulo - SP, 03073-000",
+    "address": "Av. Alcântara Machado - Belenzinho, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Piso tátil"]
   },
@@ -433,7 +433,7 @@ const linha3: Station[] = [
     "name": "Penha",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Av. Radial Leste, s/n - Penha, São Paulo - SP, 03626-000",
+    "address": "R. Alvinópolis, 178 - Vila Beatriz, São Paulo - SP, 03644-070",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Piso tátil"]
   },
@@ -451,7 +451,7 @@ const linha3: Station[] = [
     "name": "Guilhermina-Esperança",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Av. Radial Leste, s/n - Vila Guilhermina, São Paulo - SP, 03688-000",
+    "address": "R. Astorga, 728 - Vila Guilhermina, São Paulo - SP, 03542-000",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Elevadores", "Piso tátil"]
   },
@@ -478,7 +478,7 @@ const linha3: Station[] = [
     "name": "Corinthians-Itaquera",
     "line": "Linha 3-Vermelha",
     "type": "Metrô",
-    "address": "Av. Radial Leste, s/n - Itaquera, São Paulo - SP, 08295-005",
+    "address": "Largo da Matriz, 85-119 - Itaquera, São Paulo - SP, 08210-110",
     "openingHours": "Todos os dias, das 4h40 às 0h20",
     "accessibility": ["Elevadores", "Piso tátil"]
   }
