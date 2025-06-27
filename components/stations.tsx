@@ -35,7 +35,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
   const totalPages = Math.ceil(filteredStations.length / stationsPerPage)
 
   return (
-    <div className="space-y-6 max-w-2xl mx-auto">
+    <div className="space-y-2 max-w-2xl mx-auto">
       <div className="sticky top-[3.5rem] z-40 bg-background/80 backdrop-blur-sm py-3">
         <div className="relative max-w-2xl mx-auto">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -62,7 +62,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
         </div>
       ) : (
         <>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {currentStations.map((station) => {
               const lineNumber = extractLineNumber(station.line)
               const lineColor = getLineColor(lineNumber)
@@ -71,7 +71,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
                 <Link
                     key={station.id}
                     href={`/station/${station.id}`}
-                    className="group relative flex flex-col rounded-md border border-muted bg-card p-4 transition hover:bg-muted/40"
+                    className="group relative flex flex-col rounded-md border border-muted/50 bg-card p-4 transition hover:bg-muted/50"
                   >
                     <div className="flex items-center gap-2 mb-1">
                       <div

@@ -96,8 +96,8 @@ export default function StationPage({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container py-6">
-        <div className="max-w-2xl mx-auto mb-6 flex justify-between items-center px-2">
+      <main className="p-3 py-6">
+        <div className="max-w-2xl mx-auto mb-4 flex justify-between items-center px-2">
           {/* Botão Voltar */}
           <Button
             variant="ghost"
@@ -133,7 +133,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
           </a>
         </div>
 
-       <div className="rounded-xl bg-card p-6 max-w-2xl mx-auto space-y-6">
+       <div className="rounded-md border border-muted/50 bg-card p-4 max-w-2xl mx-auto space-y-6">
         {/* Linha */}
         <div className="flex items-center gap-2">
           <div
@@ -185,27 +185,10 @@ export default function StationPage({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        {/* Link para o Maps */}
-        <div>
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(station.address)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              size="sm"
-              variant="secondary"
-              className="gap-1 text-sm"
-            >
-              <ExternalLink className="h-4 w-4" />
-              Ver no Google Maps
-            </Button>
-          </a>
-        </div>
       </div>
 
 
-        <div className="rounded-xl mt-4 bg-card p-3 max-w-2xl mx-auto">
+        <div className="rounded-md border border-muted/50 bg-card p-2 mt-2 max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4 px-2">
           <h2 className="text-lg font-semibold text-muted-foreground">
             Igrejas próximas
@@ -221,7 +204,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
             <div className="grid gap-4">
               {churches.map((church) => (
                 <div key={church.id}>
-                  <div className="flex flex-col p-3 rounded-sm">
+                  <div className="flex flex-col p-1 rounded-sm">
 
                      <Accordion 
                         type="single" 
@@ -241,27 +224,27 @@ export default function StationPage({ params }: { params: { id: string } }) {
                                 <p className="text-sm mt-3 text-muted-foreground">
                                   <b>Distância:</b> {church.distance} 
                                 </p>
-                                <a
-                                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex mt-3 items-center gap-1 text-sm font-medium dark:text-primary-foreground hover:underline"
-                                  >
                                   <Button
                                     size="sm"
                                     variant="secondary"
-                                    className="shadow-none border-none"
+                                    className="shadow-none mt-2"
+                                  >
+                                    <a
+                                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 text-sm font-medium dark:text-primary-foreground"
                                   >
                                     <ExternalLink className="mr-1 h-3 w-3" />
                                     Ver no Google Maps
-                                  </Button>
                                   </a>
+                                  </Button>
                               </div>
 
                               <Separator />
 
                               <div>
-                                <h3 className="text-sm font-semibold mb-2">Cultos Oficiais</h3>
+                                <h3 className="text-sm font-semibold mb-2">Culto Oficial</h3>
                                  {church.cultos.cultoOficial.map((culto, index) => (
                                   <div
                                     key={index}
@@ -276,17 +259,18 @@ export default function StationPage({ params }: { params: { id: string } }) {
                               </div>
 
                               <div>
-                                <h3 className="text-sm font-semibold mb-2">Reunião de Jovens</h3>
-                                  {church.cultos.reuniaoJovens.map((index) => {
-                                  return (
-                                  <div  key={index}  className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed">
+                                <h3 className="text-sm font-semibold mb-2">Reunião de Jovens e Menores</h3>
+                                 {church.cultos.reuniaoJovens.map((culto, index) => (
+                                  <div
+                                    key={index}
+                                    className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed"
+                                  >
                                     <div className="flex items-center space-x-2">
                                       <CalendarClock className="w-4 h-4 text-muted-foreground" />
-                                      <span> {church.cultos.reuniaoJovens} </span>
+                                      <span>{culto}</span>
                                     </div>
                                   </div>
-                                  )
-                                })}
+                                ))}
                               </div>
 
                             </CardContent>
@@ -300,7 +284,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
               ))}
             </div>
           ) : (
-            <div className="rounded-xl bg-card border p-6 max-w-2xl mx-auto">
+            <div className="rounded-xl bg-card p-4 max-w-2xl mx-auto">
               <div className="flex flex-col items-center gap-4">
                 <p className="text-sm text-muted-foreground">
                   Nenhum endereço encontrado próximo à estação "{station.name}"

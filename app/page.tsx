@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container py-6">
+      <main className="p-6 py-6">
         <div className="text-center mb-8 relative">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-shadow-lg">
             Congregue com mais{" "}

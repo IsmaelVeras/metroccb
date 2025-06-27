@@ -567,7 +567,7 @@ const linha5: Station[] = [
     "name": "Campo Limpo",
     "line": "Linha 5-Lilás",
     "type": "ViaMobilidade",
-    "address": "Av. Carlos Caldeira Filho, 4275 - Vila das Belezas, São Paulo - SP, 05835-000",
+    "address": "Av. Carlos Caldeira Filho, 13500 - Vila Prel, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h40 às 0h00",
     "accessibility": ["Elevadores", "Piso tátil"]
   },
@@ -807,6 +807,15 @@ const linha7: Station[] = [
     "accessibility": ["Piso tátil"]
   },
   {
+  "id": "5c6f1533-84c9-4c7b-a0a7-0cb3c427aa2e",
+  "name": "Caieiras",
+  "line": "Linha 7-Rubi",
+  "type": "CPTM",
+  "address": "Rua Pedro Celestino da Silva, s/n - Centro, Caieiras - SP",
+  "openingHours": "Todos os dias, das 4h00 às 0h00",
+  "accessibility": ["Piso tátil"]
+},
+{
     "id": "5c287a69-446e-4c1c-bd30-3ec41ecb9b70",
     "name": "Lapa",
     "line": "Linha 7-Rubi",
@@ -919,7 +928,7 @@ const linha7: Station[] = [
     "name": "Várzea Paulista",
     "line": "Linha 7-Rubi",
     "type": "CPTM",
-    "address": "Rua Capivari, s/n - Várzea Paulista - SP, 13220-000",
+    "address": "R. Antônio Feres Sada - Centro, Várzea Paulista - SP, 13220-020",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
@@ -931,7 +940,16 @@ const linha7: Station[] = [
     "address": "Av. União dos Ferroviários, s/n - Centro, Jundiaí - SP, 13201-160",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Elevadores", "Piso tátil"]
-  }
+  },
+  {
+  "id": "c80edb57-5e46-4184-a7a8-d9bd1164c3f6",
+  "name": "Francisco Morato",
+  "line": "Linha 7-Rubi",
+  "type": "CPTM",
+  "address": "Rua Gerônimo Caetano Garcia, s/n – Francisco Morato – SP",
+  "openingHours": "Todos os dias, das 4h00 às 0h00",
+  "accessibility": ["Elevadores", "Piso tátil"]
+}
 ]
 
 // Linha 8 - Diamante (Diamond Line)
@@ -944,15 +962,6 @@ const linha8: Station[] = [
     "address": "Praça Júlio Prestes, s/n - Santa Cecília, São Paulo - SP, 01104-000",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Elevadores", "Piso tátil"]
-  },
-  {
-    "id": "8a8c1b3d-5f2d-4ad4-9e35-38a9f30b0298",
-    "name": "Lapa",
-    "line": "Linha 8–Diamante",
-    "type": "CPTM",
-    "address": "Rua Guaicurus, s/n - Lapa, São Paulo - SP, 05046-000",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Piso tátil"]
   },
   {
     "id": "f256e8d4-99e1-4472-b2dc-fab6c8a55547",
@@ -1045,6 +1054,24 @@ const linha8: Station[] = [
     "accessibility": ["Piso tátil"]
   },
   {
+    "id": "850631cb-5f47-49be-a386-5d1314f230f7",
+    "name": "Domingos de Moraes",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Santa Marina, s/n - Domingos de Moraes, São Paulo - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "dc5f9281-ff01-4d2e-b71a-5820ba086544",
+    "name": "Imperatriz Leopoldina",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Imperatriz Leopoldina, s/n - Vila Leopoldina, São Paulo - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
     "id": "5c90a7f7-d0d8-4fdf-9a7f-8e6d2f30b5c8",
     "name": "Jandira",
     "line": "Linha 8–Diamante",
@@ -1070,29 +1097,66 @@ const linha8: Station[] = [
     "address": "Av. Índio Tibiriçá, s/n - Itapevi - SP, (cep pendente)",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
-  }
+  },
+  {
+    "id": "c1d93f5b-8d33-4ea5-95f5-1dbe173f7e07",
+    "name": "Sagrado Coração",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Sagrado Coração, s/n - Jandira - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "9f2a16ac-2756-4ae1-bc14-503a2e0b4de1",
+    "name": "Jardim Silveira",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Washington Luiz, s/n - Jardim Silveira, Barueri - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "7f845f91-bc14-4f43-8f87-5b7a2e53778a",
+    "name": "Jardim Belval",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Henriqueta Mendes Guerra, s/n - Jardim Belval, Barueri - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "e2c7f7a4-9b3f-4b96-bb94-f0c9b7e62c47",
+    "name": "Antônio João",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Antônio João, s/n - Barueri - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+    },
+  {
+    "id": "5673389c-0607-4598-8289-3c5a5f3fe103",
+    "name": "Santa Terezinha",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. Santa Terezinha, s/n - São Paulo - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "87b3d779-5a58-44e4-afce-9cc1d212eba1",
+    "name": "General Miguel Costa",
+    "line": "Linha 8–Diamante",
+    "type": "CPTM",
+    "address": "Av. General Miguel Costa, s/n - Osasco - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+}
+
 ]
 
 // Linha 9 - Esmeralda (Emerald Line)
 const linha9: Station[] = [
-  {
-    "id": "c3e6e3d4-9bb7-4d2d-9c1a-1f9b2dfb7e28",
-    "name": "Osasco",
-    "line": "Linha 9‑Esmeralda",
-    "type": "ViaMobilidade",
-    "address": "Praça Antonio Menck, s/n - Centro, Osasco - SP",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
-  {
-    "id": "7e3a438b-6f57-4a4d-89ae-c3b17381d9c1",
-    "name": "Presidente Altino",
-    "line": "Linha 9‑Esmeralda",
-    "type": "ViaMobilidade",
-    "address": "Rua Abílio Mendes, 8 - Presidente Altino, Osasco - SP",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
   {
     "id": "1a5b7c3f-e2d1-4c62-a2f7-1a1bfbf60f34",
     "name": "Ceasa",
@@ -1110,6 +1174,15 @@ const linha9: Station[] = [
     "address": "Av. das Nações Unidas, 2100 - Jaguaré, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Elevadores", "Piso tátil"]
+  },
+  {
+    "id": "f38f6f2a-96f3-43c3-b38e-6a5f3b5fd8a1",
+    "name": "Mendes-Vila Natal",
+    "line": "Linha 9–Esmeralda",
+    "type": "CPTM",
+    "address": "Av. Cristalino Rolim de Freitas, s/n - Jardim das Rosas, São Paulo - SP, (CEP pendente)",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
   },
   {
     "id": "49d42a62-7e56-45f4-b80e-2f11ff8155c9",
