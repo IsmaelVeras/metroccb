@@ -20,9 +20,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background text-neutral-900 dark:text-neutral-100 px-2">
+
+  <div className="min-h-screen bg-background">
       <Header />
-      <main className="p-6 py-6">
+      <main className="p-3 py-6">
         <FlipWordsDemo />
         {loading ? (
           <ClassicLoader />
@@ -31,7 +32,8 @@ export default function Home() {
             <Stations stationsData={stationsData} />
           </div>
         )}
-      </main>
+        </main>
     </div>
+
   )
 }
