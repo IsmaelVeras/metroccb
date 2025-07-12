@@ -1202,4 +1202,173 @@ export const ccbAddressesData: CcbChurch[] = [
     "reuniaoJovens": ["Domingo - 10:00"]
   }
 },
+{
+  "id": 79,
+  "name": "Central",
+  "address": "R. Santa Catarina, 243 - Centro, São Caetano do Sul - SP, 09510-120",
+  "distance": "400 m",
+  "stationId": "4932482b-2531-491f-8656-66d899f023d6",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Segunda-feira - 19:30",
+      "Quarta-feira - 20:00",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 80,
+  "name": "Central",
+  "address": "R. Japão, 233 - Vila Bocaina, Mauá - SP, 09310-090",
+  "distance": "350 m",
+  "stationId": "a715727b-255e-4700-a634-738c89e2faa7",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Terça-feira - 10:00",
+      "Quinta-feira - 19:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 81,
+  "name": "Jardim Guapituba",
+  "address": "R. José Vidal Senin, 106 - Jardim Guapituba, Mauá - SP, 09360-470",
+  "distance": "450 m",
+  "stationId": "12e1618c-5a54-4216-9a2e-94ab2826cf93",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Segunda-feira - 19:30",
+      "Quarta-feira - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 82,
+  "name": "Parque das Américas",
+  "address": "Rua São Domingos, 65 - Parque das Américas, Mauá - SP, 09351-140",
+  "distance": "500 m",
+  "stationId": "12e1618c-5a54-4216-9a2e-94ab2826cf93",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Terça-feira - 19:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 83,
+  "name": "Vila Mercedes",
+  "address": "R. Cícero Rodrigues da Silva, 66 - Vila Mercedes, Mauá - SP, 09361-380",
+  "distance": "1 km",
+  "stationId": "12e1618c-5a54-4216-9a2e-94ab2826cf93",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Quarta-feira - 19:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 84,
+  "name": "Campestre",
+  "address": "R. Gen. Canavarro, 660 - Campestre, Santo André - SP, 09070-440",
+  "distance": "1.4 km",
+  "stationId": "fb887a43-330b-4f16-af05-e55d2849ae4c",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Quinta-feira - 19:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 85,
+  "name": "Vila Camilópolis",
+  "address": "R. Barcelona, 25 - Utinga, Santo André - SP, 09230-080",
+  "distance": "1.3 km",
+  "stationId": "e333a23b-384f-4f2b-8a15-33f0785dc4fe",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Segunda-feira - 19:30",
+      "Sexta-feira - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 86,
+  "name": "Central",
+  "address": "R. Catequese, 570 - Jardim, Santo André - SP, 09090-400",
+  "distance": "650 m",
+  "stationId": "0abf4854-f3b7-4d12-aa28-15dbda0409f3",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 09:30",
+      "Domingo - 18:30",
+      "Quarta-feira - 19:30",
+      "Sexta-feira - 20:00",
+    ],
+    "reuniaoJovens": ["Domingo - 09:30"]
+  }
+},
+{
+  "id": 87,
+  "name": "Capuava",
+  "address": "R. George Willian Hauck, 257 - Capuava, Mauá - SP, 09380-180",
+  "distance": "1 km",
+  "stationId": "800b6733-88af-4ce1-9740-20d14e41cd2a",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Terça-feira - 19:30",
+      "Sexta-feira - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 88,
+  "name": "Central",
+  "address": "R. Renato Andréoli, 45 - Centro, Ribeirão Pires - SP, 09402-500",
+  "distance": "900 m",
+  "stationId": "7089011f-4623-43b1-a60b-dc25c04983bc",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Terça-feira - 19:30",
+      "Quinta-feira - 09:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
+{
+  "id": 89,
+  "name": "Central",
+  "address": "Rua José Maria Figueiredo, 369 - Centro, Rio Grande da Serra - SP, 09450-000",
+  "distance": "600 m",
+  "stationId": "1a8a4dd7-979b-445e-b3de-ba87d557c5a2",
+  "cultos": {
+    "cultoOficial": [
+      "Domingo - 18:30",
+      "Quinta-feira - 19:30",
+      "Sábado - 19:30",
+    ],
+    "reuniaoJovens": ["Domingo - 10:00"]
+  }
+},
 ]

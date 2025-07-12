@@ -10,8 +10,10 @@ import { stationsData } from "@/data/stations"
 import { ccbAddressesData } from "@/data/ccb-addresses"
 import { extractLineNumber, getLineColor } from "@/data/metro-lines"
 import type { Station, CcbChurch } from "@/types"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import ClassicLoader from "@/components/ui/loader"
+import MinimalCard, { MinimalCardContent, MinimalCardTitle } from "@/components/ui/minimal-card"
 
 export default function StationPage({ params }: { params: { id: string } }) {
   const router = useRouter()
@@ -57,13 +59,7 @@ export default function StationPage({ params }: { params: { id: string } }) {
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
-        <main className="container py-6">
-          <div className="flex justify-center items-center h-[60vh]">
-            <div className="h-10 w-10 animate-spin rounded-full border-2 border-muted-foreground border-t-transparent" />
-          </div>
-        </main>
-
+        <ClassicLoader />
       </div>
     )
   }
@@ -206,78 +202,113 @@ export default function StationPage({ params }: { params: { id: string } }) {
                 <div key={church.id}>
                   <div className="flex flex-col p-1 rounded-sm">
 
-                     <Accordion 
-                        type="single" 
+                     <Accordion
+                        type="single"
                         collapsible
-                        defaultValue="item-1" 
+                        defaultValue="item-1"
                         className="w-full"
                       >
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-xl p-2 overflow-hidden text-ellipsis font-semibold">{church.name} </AccordionTrigger>
-                        <AccordionContent>
-                          <Card className="bg-background/50 border rounded-2xl border-dotted">
-                            <CardContent className="space-y-4 p-4">
-                              <div>
-                                <p className="text-sm text-muted-foreground">
-                                  <b>Endereço:</b> {church.address}
-                                </p>
-                                <p className="text-sm mt-3 text-muted-foreground">
-                                  <b>Distância:</b> {church.distance} 
-                                </p>
+                        <AccordionItem value="item-1">
+                          <AccordionTrigger className="text-xl font-semibold p-4 truncate">
+                            {church.name}
+                          </AccordionTrigger>
+
+                          <AccordionContent>
+                            <Card className="bg-background/80 dark:bg-background/50 border border-none rounded-2xl">
+
+                              <CardContent className="space-y-6 p-6 rounded-sm border border-dashed border-muted/50">
+
+                                {/* Bloco: Endereço e Distância */}
+                                <div className="space-y-2">
+                                  <p className="text-sm text-muted-foreground">
+                                    <strong>Endereço:</strong> {church.address}
+                                  </p>
+                                  <p className="text-sm text-muted-foreground">
+                                    <strong>Distância:</strong> {church.distance}
+                                  </p>
                                   <Button
                                     size="sm"
                                     variant="secondary"
-                                    className="shadow-none mt-2"
+                                    className="mt-2"
                                   >
                                     <a
-                                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 text-sm font-medium dark:text-primary-foreground"
-                                  >
-                                    <ExternalLink className="mr-1 h-3 w-3" />
-                                    Ver no Google Maps
-                                  </a>
+                                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(church.address)}`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex items-center gap-1 text-sm font-medium dark:text-primary-foreground"
+                                    >
+                                      <ExternalLink className="w-4 h-4" />
+                                      Ver no Google Maps
+                                    </a>
                                   </Button>
-                              </div>
+                                </div>
 
-                              <Separator />
+                                <Separator />
 
-                              <div>
-                                <h3 className="text-sm font-semibold mb-2">Culto Oficial</h3>
-                                 {church.cultos.cultoOficial.map((culto, index) => (
-                                  <div
-                                    key={index}
-                                    className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed"
-                                  >
-                                    <div className="flex items-center space-x-2">
-                                      <CalendarClock className="w-4 h-4 text-muted-foreground" />
-                                      <span>{culto}</span>
+                                {/* Bloco: Culto Oficial */}
+                                <div>
+                                  <h3 className="text-base font-semibold mb-3">
+                                    Culto Oficial
+                                  </h3>
+
+                                  {church.cultos.cultoOficial.length > 0 ? (
+                                    <div className="space-y-2">
+                                      {church.cultos.cultoOficial.map((culto, index) => (
+                                        <div
+                                          key={index}
+                                          className="flex items-center gap-2 bg-muted/20 rounded-lg px-4 py-2 border border-dashed"
+                                        >
+                                          <CalendarClock className="w-4 h-4 text-muted-foreground" />
+                                          <span className="text-sm">{culto}</span>
+                                        </div>
+                                      ))}
                                     </div>
-                                  </div>
-                                ))}
-                              </div>
+                                  ) : (
+                                    <p className="text-sm italic text-muted-foreground">
+                                      Nenhuma informação disponível.
+                                    </p>
+                                  )}
+                                </div>
 
-                              <div>
-                                <h3 className="text-sm font-semibold mb-2">Reunião de Jovens e Menores</h3>
-                                 {church.cultos.reuniaoJovens.map((culto, index) => (
-                                  <div
-                                    key={index}
-                                    className="flex items-center justify-between mb-1 bg-muted/20 rounded-md px-4 py-3 border border-dashed"
-                                  >
-                                    <div className="flex items-center space-x-2">
-                                      <CalendarClock className="w-4 h-4 text-muted-foreground" />
-                                      <span>{culto}</span>
+                                {/* Bloco: Reunião de Jovens e Menores */}
+                                <div>
+                                  <h3 className="text-base font-semibold mb-3">
+                                    Reunião de Jovens e Menores
+                                  </h3>
+
+                                  {church.cultos.reuniaoJovens.length > 0 ? (
+                                    <div className="space-y-2">
+                                      {church.cultos.reuniaoJovens.map((culto, index) => (
+                                        <div
+                                          key={index}
+                                          className="flex items-center gap-2 bg-muted/20 rounded-lg px-4 py-2 border border-dashed"
+                                        >
+                                          <CalendarClock className="w-4 h-4 text-muted-foreground" />
+                                          <span className="text-sm">{culto}</span>
+                                        </div>
+                                      ))}
                                     </div>
-                                  </div>
-                                ))}
-                              </div>
+                                  ) : (
+                                    <p className="text-sm italic text-muted-foreground">
+                                      Nenhuma informação disponível.
+                                    </p>
+                                  )}
+                                </div>
 
-                            </CardContent>
-                          </Card>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
+                                {/* Bloco: Ajuda com dados faltantes */}
+                                {(church.cultos.cultoOficial.length === 0 || church.cultos.reuniaoJovens.length === 0) && (
+                                  <div className="pt-4 border-t border-muted text-center text-sm italic text-muted-foreground">
+                                    Nos ajude a manter essas informações atualizadas. Se você souber os horários dos cultos,
+                                    <a href="/contato" className="text-primary underline ml-1">clique aqui</a> para nos informar.
+                                  </div>
+                                )}
+
+                              </CardContent>
+                            </Card>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+
                   
                   </div>
                 </div>

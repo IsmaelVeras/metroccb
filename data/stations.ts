@@ -1306,114 +1306,222 @@ const linha9: Station[] = [
 // Linha 10 - Turquesa (Turquoise Line)
  const linha10: Station[] = [
   {
-    "id": "bcf395aa-4d6e-4a7e-b785-8c6bb97e5f7f",
-    "name": "Itaim Paulista",
+    "id": "31468c88-9e99-4e3e-8e58-1ac7b5f6f4f4",
+    "name": "Juventus–Mooca",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Rua Salvador Jorgino, 110 - Itaim Paulista, São Paulo - SP, 08295-190",
+    "address": "Rua Monsenhor João Felipo, s/n - Mooca, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "53783d34-4bca-4eae-93c9-07f1ae900399",
-    "name": "Calmon Viana",
+    "id": "bd25b38c-1548-4888-90aa-c645a09b96f5",
+    "name": "Ipiranga",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Rua Orós, s/n - Calmon Viana, Poá - SP, 08576-280",
+    "address": "Av. do Estado, s/n - Ipiranga, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "d9e19863-87f6-4f54-b179-c8db0b87f949",
-    "name": "Poá",
+    "id": "59673886-792d-46f5-8bbe-8f488cdfeea7",
+    "name": "Tamanduateí",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Rua Amador Bueno, 102 - Poá - SP, 08552-160",
+    "address": "Av. Presidente Wilson, 483 - Ipiranga, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "07d6b536-c9d4-4a4c-b136-8c9e2c3bbda2",
-    "name": "Suzano",
+    "id": "4932482b-2531-491f-8656-66d899f023d6",
+    "name": "São Caetano do Sul – Prefeito Walter Braido",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Rua Comandante Souto Maior, 174 - Suzano - SP, 08675-470",
+    "address": "Praça da Estação, s/n - Centro, São Caetano do Sul - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "1c7a0d72-3a2b-4e6d-8d1f-07d14e8dce49",
-    "name": "Mogi das Cruzes",
+    "id": "e333a23b-384f-4f2b-8a15-33f0785dc4fe",
+    "name": "Utinga",
     "line": "Linha 10 - Turquesa",
     "type": "CPTM",
-    "address": "Praça Sacadura Cabral - Centro, Mogi das Cruzes - SP, 08710-450",
+    "address": "Rua Visconde de Inhaúma, s/n - Utinga, Santo André - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
+  {
+    "id": "fb887a43-330b-4f16-af05-e55d2849ae4c",
+    "name": "Prefeito Saladino",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Av. Industrial, s/n - Centro, Santo André - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "0abf4854-f3b7-4d12-aa28-15dbda0409f3",
+    "name": "Prefeito Celso Daniel – Santo André",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Praça Armando Arruda Pereira, s/n - Centro, Santo André - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "800b6733-88af-4ce1-9740-20d14e41cd2a",
+    "name": "Capuava",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Av. Papa João XXIII, s/n - Capuava, Mauá - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "a715727b-255e-4700-a634-738c89e2faa7",
+    "name": "Mauá",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Praça 22 de Novembro, s/n - Centro, Mauá - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "12e1618c-5a54-4216-9a2e-94ab2826cf93",
+    "name": "Guapituba",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Av. Capitão João, s/n - Jardim Guapituba, Mauá - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "7089011f-4623-43b1-a60b-dc25c04983bc",
+    "name": "Ribeirão Pires – Antônio Bespalec",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Av. Francisco Monteiro, s/n - Centro, Ribeirão Pires - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "1a8a4dd7-979b-445e-b3de-ba87d557c5a2",
+    "name": "Rio Grande da Serra",
+    "line": "Linha 10 - Turquesa",
+    "type": "CPTM",
+    "address": "Rua Prefeito Cido Franco, s/n - Centro, Rio Grande da Serra - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  }
 ]
 
 //  Linha 11 - Coral (Coral Line)
 const linha11: Station[] = [
   {
-    "id": "8d8e5b0e-7925-4e5a-9473-bd143f6d0fbc",
-    "name": "São Caetano do Sul",
+    "id": "f14ffcff-d8c1-4579-921a-c0a589f70331",
+    "name": "Dom Bosco",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Rua Major Dobrânic, 49 - São Caetano do Sul - SP, 09510-000",
+    "address": "Rua Carlos Gouvêa, s/n - Itaquera, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "d1e7c6f5-f2b3-4fa5-9e8c-0e9fae95fa4c",
-    "name": "Santo André",
+    "id": "a17accca-a956-44e0-9556-fd446101fbf6",
+    "name": "José Bonifácio",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Av. Industrial, 330 - Santo André - SP, 09020-000",
+    "address": "Av. Nagib Farah Maluf, s/n - José Bonifácio, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "e579d9b1-632a-4f9e-bfa1-1f2a970a3eec",
-    "name": "Prefeito Celso Daniel–Santo André",
+    "id": "978ef8e5-c496-4bb1-98b3-c779283c7a52",
+    "name": "Guaianases",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Av. Industrial, 551 - Santo André - SP, 09020-000",
+    "address": "Rua Salvador Gianetti, s/n - Guaianases, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "8ae95a2e-b4de-4129-b79f-9b1e19936a27",
-    "name": "Rudge Ramos",
+    "id": "17a7be3d-5103-44fa-9d21-c8bd0e86ae85",
+    "name": "Antonio Gianetti Neto",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Rua Vitalino de Lima, 200 - São Bernardo do Campo - SP, 09606-190",
+    "address": "Av. Antonio Gianetti Neto, s/n - Ferraz de Vasconcelos - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "7d9c65e0-1d6e-4f06-85e7-5c74ff66b62a",
-    "name": "São Bernardo do Campo",
+    "id": "43240012-fa45-44a2-a3ae-f3109d087428",
+    "name": "Ferraz de Vasconcelos",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Av. Caminho do Mar, 1000 - São Bernardo do Campo - SP, 09726-060",
+    "address": "Av. Brasil, s/n - Ferraz de Vasconcelos - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "35a2e2a5-01b4-4e44-a7de-c57a45d9e0c1",
-    "name": "Prefeito Walter Braido",
+    "id": "2074e5d1-7f37-444e-b1ac-aed09f509cad",
+    "name": "Poá",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Rua das Paineiras, 100 - São Bernardo do Campo - SP, 09726-160",
+    "address": "Praça Padre João Álvares, s/n - Poá - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
+    "accessibility": ["Piso tátil"]
   },
   {
-    "id": "a0c5560c-0f9f-4d7f-9a4a-f0e7f83a8a24",
-    "name": "Ritcheu",
+    "id": "96893c93-d267-4586-a715-b19967f13427",
+    "name": "Calmon Viana",
     "line": "Linha 11 - Coral",
     "type": "CPTM",
-    "address": "Rua Prefeito José Esdras da Silva, s/n - São Bernardo do Campo - SP, 09726-170",
+    "address": "Av. Brasil, s/n - Calmon Viana, Poá - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "509c3124-3fd9-4dce-8168-8c597dcc0147",
+    "name": "Suzano",
+    "line": "Linha 11 - Coral",
+    "type": "CPTM",
+    "address": "Rua Prudente de Moraes, s/n - Centro, Suzano - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "3f39fb19-5463-4fb8-93af-c5ae4edc138b",
+    "name": "Jundiapeba",
+    "line": "Linha 11 - Coral",
+    "type": "CPTM",
+    "address": "Rua Capitão João, s/n - Jundiapeba, Mogi das Cruzes - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "2913605c-75e1-4165-a300-206ab638d0bd",
+    "name": "Brás Cubas",
+    "line": "Linha 11 - Coral",
+    "type": "CPTM",
+    "address": "Av. Brasil, s/n - Brás Cubas, Mogi das Cruzes - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "1fe79e1b-3d62-4267-bc17-0f1137f8d811",
+    "name": "Mogi das Cruzes",
+    "line": "Linha 11 - Coral",
+    "type": "CPTM",
+    "address": "Rua Cabo Diogo Oliver, s/n - Centro, Mogi das Cruzes - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "c49df59a-3277-474f-bca7-b4d744a7612b",
+    "name": "Estudantes",
+    "line": "Linha 11 - Coral",
+    "type": "CPTM",
+    "address": "Av. Doutor Cândido Xavier de Almeida Souza, s/n - Mogi das Cruzes - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   }
@@ -1422,63 +1530,109 @@ const linha11: Station[] = [
 // Linha 12 - Safira (Sapphire Line)
 const linha12: Station[] = [
   {
-    "id": "a4bdbb49-1778-4c88-9a5e-c4fddf25165d",
-    "name": "Dom Bosco",
+    "id": "5ff91f81-692e-4ab8-8b0f-86b2f8327390",
+    "name": "Engenheiro Goulart",
     "line": "Linha 12 - Safira",
     "type": "CPTM",
-    "address": "Rua Ferreira de Araújo, 75 - Itaquera, São Paulo - SP, 08230-000",
+    "address": "Av. Assis Ribeiro, s/n - Cangaíba, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "f5e4e5e4-c18c-4b04-9a98-263678c883ef",
+    "id": "73d67dc8-81fd-4be8-a826-f9d3513b52a5",
+    "name": "USP Leste",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Av. Doutor Assis Ribeiro, s/n - Ermelino Matarazzo, São Paulo - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "911e1441-e476-4363-acea-e6b440c8b6bb",
+    "name": "Comendador Ermelino",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Rua Astrogildo Machado, s/n - Ermelino Matarazzo, São Paulo - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "f82c5e63-1d26-432f-b00f-bcfb029b4c95",
     "name": "São Miguel Paulista",
     "line": "Linha 12 - Safira",
     "type": "CPTM",
-    "address": "Rua Estevão de Araújo, 10 - São Miguel Paulista, São Paulo - SP, 08070-000",
+    "address": "Av. Marechal Tito, s/n - São Miguel Paulista, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "62e0b35a-6d07-401e-b3c7-fac30a023e3a",
-    "name": "Jardim Helena-Vila Mara",
+    "id": "32347099-f87f-4ebd-b280-957918d47b76",
+    "name": "Jardim Helena - Vila Mara",
     "line": "Linha 12 - Safira",
     "type": "CPTM",
-    "address": "Rua dos Coqueiros, s/n - Jardim Helena, São Paulo - SP, 08295-390",
+    "address": "Av. Doutor José Arthur Nova, s/n - Jardim Helena, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "a1ce92d3-5d2d-43a7-9b22-7e7442ca151d",
+    "id": "97f0ee73-3b94-4675-849a-5a6dcb7eddc2",
+    "name": "Itaim Paulista",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Rua Salvador Jorgino, 110 - Itaim Paulista, São Paulo - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "45d6c202-d5c6-4742-887c-13a3ad81e462",
     "name": "Jardim Romano",
     "line": "Linha 12 - Safira",
     "type": "CPTM",
-    "address": "Rua das Palmeiras, s/n - Jardim Romano, São Paulo - SP, 08230-330",
+    "address": "Rua José Francisco da Silva, s/n - Jardim Romano, São Paulo - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   },
   {
-    "id": "8f7f1725-3b12-4df1-a5a5-62b35bcd6d42",
+    "id": "a9dcf81e-5ced-4a2f-bcbb-a965e30758e9",
+    "name": "Engenheiro Manoel Feio",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Rua Paes de Barros, s/n - Itaquaquecetuba - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "333ccdf0-8689-41e4-9d69-08c8c7788fc8",
+    "name": "Itaquaquecetuba",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Rua João Vagnotti, s/n - Centro, Itaquaquecetuba - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "739fc79d-b377-4034-a8fe-14c0aa93fef0",
+    "name": "Aracaré",
+    "line": "Linha 12 - Safira",
+    "type": "CPTM",
+    "address": "Av. Brasil, s/n - Aracaré, Itaquaquecetuba - SP",
+    "openingHours": "Todos os dias, das 4h00 às 0h00",
+    "accessibility": ["Piso tátil"]
+  },
+  {
+    "id": "94cd2551-9b0c-45cb-9818-56f75ec517a9",
     "name": "Calmon Viana",
     "line": "Linha 12 - Safira",
     "type": "CPTM",
-    "address": "Rua Orós, s/n - Calmon Viana, Poá - SP, 08576-280",
+    "address": "Av. Brasil, s/n - Calmon Viana, Poá - SP",
     "openingHours": "Todos os dias, das 4h00 às 0h00",
     "accessibility": ["Piso tátil"]
   }
 ]
 
+
 // Linha 13 - Jade (Jade Line)
 const linha13: Station[] = [
-  {
-    "id": "1f1b15ff-c4d4-48f4-915b-9465c20a06c6",
-    "name": "Engenheiro Goulart",
-    "line": "Linha 13 - Jade",
-    "type": "CPTM",
-    "address": "Av. Dr. Assis Ribeiro, 1460 - Cangaíba, São Paulo - SP, 03810-000",
-    "openingHours": "Todos os dias, das 4h00 às 0h00",
-    "accessibility": ["Elevadores", "Piso tátil"]
-  },
   {
     "id": "e8e3d94d-d370-4469-8c65-d391c7b77ef5",
     "name": "Guarulhos–Cecap",

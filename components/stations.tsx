@@ -46,7 +46,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
               setSearchTerm(e.target.value)
               setCurrentPage(1)
             }}
-            className="pl-9 py-5 rounded-md bg-muted/30 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:outline-none border border-muted"
+            className="pl-9 py-5 rounded-sm bg-muted/30 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:outline-none border border-muted/50"
           />
         </div>
       </div>
@@ -71,7 +71,7 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
                 <Link
                     key={station.id}
                     href={`/station/${station.id}`}
-                    className="group relative flex flex-col rounded-md border border-muted/50 bg-card p-4 transition hover:bg-muted/50"
+                    className="group relative flex flex-col rounded-sm border border-muted/50 bg-card p-4 transition hover:bg-muted/40"
                   >
                     <div className="flex items-center gap-2 mb-1">
                       <div
@@ -134,9 +134,9 @@ export function Stations({ stationsData }: { stationsData: Station[] }) {
           <a
             target="_blank"
             href="https://tally.so/r/wbEvgE"
-            className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-xs font-medium transition bg-lime-100 text-lime-900 hover:bg-lime-200 dark:bg-lime-900 dark:text-lime-100 dark:hover:bg-lime-800"
+            className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-xs font-medium transition bg-lime-100 text-lime-900 hover:bg-lime-200 dark:bg-lime-500 dark:text-lime-950 dark:hover:bg-lime-600 dark:hover:text-lime-200"
           >
-            📝 Nos ajude com informações
+            📝 Ajuda a gente com informação
           </a>
         </div>
       </footer>
